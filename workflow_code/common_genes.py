@@ -5,7 +5,7 @@ import pandas as pd
 
 
 def run(bed1_path, bed2_path, output_path):
-    """Find common genes between two BED files (based on 'name' column)."""
+    """Finding common genes between two BED files (based on 'name' column)."""
 
     # Reading BED files
     bed1 = pd.read_csv(bed1_path, sep="\t")
