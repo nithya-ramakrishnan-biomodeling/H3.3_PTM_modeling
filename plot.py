@@ -4,7 +4,7 @@
 Generates a heatmap for a computeMatrix tab file containing PTM signal data.
 
 Usage:
-    python3 plot_ptm_heatmap.py --input_ptm_tab path/to/PTM_tab.tab
+    python3 plot.py --input_ptm_tab path/to/PTM_tab.tab
 
 Features:
 - Skips the first 3 header lines in the tab file.
@@ -24,7 +24,7 @@ def main():
     parser.add_argument("--input_ptm_tab", required=True, help="Path to reordered PTM tab file")
     args = parser.parse_args()
 
-    # Loadind the tab file, skipping the first 3 header lines
+    # Loading the tab file, skipping the first 3 header lines
     df = pd.read_csv(
         args.input_ptm_tab,
         sep='\t',
@@ -34,7 +34,7 @@ def main():
     )
     df = df.replace('nan', np.nan).fillna(0)
 
-    # Convert dataframe to float safely
+    # Converting dataframe to float 
     data = df.apply(pd.to_numeric, errors='coerce').fillna(0).values
 
     # Plot heatmap
