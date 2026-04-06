@@ -19,9 +19,10 @@ The script:
 def run(file1, tabfile, output):
     """
     Parameters:
-        file1   : Path to gene list file with row numbers
-        tabfile : Path to tab-delimited file to reorder
-        output  : Path to save reordered tab file
+        file1   : Path to gene list file with row numbers        sample ex: mapped_rows.txt
+        tabfile : Path to tab-delimited file to reorder          sample ex: rownum_tab.tab 
+        output  : Path to save reordered tab file                sample ex: reordered_tab.tab
+        
     """
 
     # Reading File 1 and extract row numbers
