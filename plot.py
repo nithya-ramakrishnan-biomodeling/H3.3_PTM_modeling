@@ -4,7 +4,7 @@
 Generates a heatmap for a computeMatrix tab file containing PTM signal data.
 
 Usage:
-    python3 plot.py --input_ptm_tab path/to/PTM_tab.tab
+    python3 plot.py --input_ptm_tab path/to/PTM_tab.tab   sample ex : reordered_tab_final.tab
 
 Features:
 - Skips the first 3 header lines in the tab file.
