@@ -5,7 +5,25 @@ import pandas as pd
 
 
 def run(bed1_path, bed2_path, output_path):
-    """Finding common genes between two BED files (based on 'name' column)."""
+    """
+     Finding common genes between two BED files (based on 'name' column).
+     Parameters:
+        file1 : Path to File 1 (BED File H3.3)    sample file1: H3.3_CT0.bed
+        file2 : Path to File 2 (BED File PTM)     sample file2: H3k4me3_ct0.bed
+        output: Path to save output               sample output: common_genes.txt
+
+        Output Snippet( head -10 common_genes.txt)
+        NM_001289556
+        NM_133626
+        NM_013561
+        NM_001356413
+        NM_145511
+        NM_008156
+        NM_207551
+        NM_007690
+        NM_007697
+        NR_102725
+    """
 
     # Reading BED files
     bed1 = pd.read_csv(bed1_path, sep="\t")
