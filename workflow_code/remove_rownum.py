@@ -12,8 +12,8 @@ This is for computeMatrix tab files generated with 200 bins.
 def run(input_file, output_file):
     """
     Parameters:
-        input_file  :Path to the input tab file
-        output_file : Path to save the modified file
+        input_file  :Path to the input tab file        sample ex: reordered_tab.tab
+        output_file : Path to save the modified file   sample ex: reordered_tab_final.tab
     """
 
     with open(input_file, 'r') as infile, open(output_file, 'w') as outfile:
