@@ -19,9 +19,25 @@ The script:
 def run(file1, file2, output):
     """
     Parameters:
-        file1 : File with gene names and row numbers
-        file2 : BED file with row_number column (last column)
-        output: Path to save reordered file
+        file1 : File with gene names and row numbers             sample ex: mapped_rows.txt
+        file2 : BED file with row_number column (last column)    sample ex: rownum_bed.bed
+        output: Path to save reordered file                      sample ex: reordered_bed.bed
+
+        Output Snippet( head -10 reordered_bed.bed )
+
+        #chrom	start	end	name	score	strand	thickStart	thickEnd	itemRGB	blockCount	blockSizes	blockStart	deepTools_group	row_number
+        chr17	39979941	39985774	NR_046233	0.0	+	39979941	39985774	0	1	5833	39979938	genes	43601
+        chr14	68369984	68551629	NM_177780	0.0	-	68369984	68551629	0	1	181645	68369978	genes	37406
+        chr13	14046940	14091370	NM_001362405	0.0	+	14046940	14091370	0	1	44430	14046939	genes	35966
+        chr13	14046940	14091370	NR_155555	0.0	+	14046940	14091370	0	1	44430	14046939	genes	35963
+        chr13	14046940	14091370	NM_001362404	0.0	+	14046940	14091370	0	1	44430	14046939	genes	35958
+        chr13	14046940	14091370	NM_178640	0.0	+	14046940	14091370	0	1	44430	14046939	genes	35952
+        chr9	66871648	66891678	NM_001164256	0.0	-	66871648	66891678	0	1	20030	66871642	genes	25193
+        chr9	66870399	66891678	NM_001164252	0.0	-	66870399	66891678	0	1	21279	66870393	genes	25189
+        chr9	66875696	66891678	NM_001164254	0.0	-	66875696	66891678	0	1	15982	66875690	genes	25191
+
+
+        
     """
 
     # Reading file 1 and extract row numbers
