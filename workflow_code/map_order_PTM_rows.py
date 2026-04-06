@@ -9,9 +9,24 @@ The output preserves the order of genes from file1 and lists all row indices.
 def run(file1, file2, output):
     """
     Parameters:
-        file1 : Path to File 1 (gene names)
-        file2 : Path to File 2 (BED file)
-        output: Path to save output
+        file1 : Path to File 1 (gene names)    sample ex: ordered_genes.txt
+        file2 : Path to File 2 (BED file)      sample ex: H3k4me3_ct0.bed
+        output: Path to save output            sample ex: mapped_rows.txt
+
+        Output Snippet( head -10 mapped_rows.txt)
+
+        NR_046233	43601
+        NM_177780	37406
+        NM_001362405	35966
+        NR_155555	35963
+        NM_001362404	35958
+        NM_178640	35952
+        NM_001164256	25193
+        NM_001164252	25189
+        NM_001164254	25191
+        NM_001164253	25192
+
+        
     """
 
     # Reading file 1 and extracting gene names
